@@ -1,0 +1,13 @@
+{
+   DO X FROM 1 TO 50 {
+      IF X > 25 { 
+         FD X
+         RT 30
+         DO Y FROM 1 TO 8 {
+            SET D := X 5 / ;
+            FD D
+            RT 45
+         }
+      }
+   }
+}

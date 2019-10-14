@@ -1,0 +1,30 @@
+1. Adding 'MOV', 'COLOR', 'HOME' and 'IF' instruction
+
+extended formal grammar:
+
+<MAIN> ::= "{" <INSTRCTLST>
+<INSTRCTLST> ::= <INSTRUCTION><INSTRCTLST> | "}"
+<INSTRUCTION> ::= <FD> | <LT> | <RT> | <DO> | <SET> | <MOV> | <COLOR> | <HOME> | <IF>
+<FD> ::= "FD" <VARNUM>
+<LT> ::= "LT" <VARNUM>
+<RT> ::= "RT" <VARNUM>
+<DO> ::= "DO" <VAR> "FROM" <VARNUM> "TO" <VARNUM> "{" <INSTRCTLST>
+<MOV> ::= "MOV" <VARNUM> <VARNUM>
+<COLOR> ::= "COLOR" "RED" | "COLOR" "GREEN" | "COLOR" "BLUE"
+<HOME> ::= "HOME"
+<IF> ::= "IF" <VARNUM> <CMP> <VARNUM> "{" <INSTRCTLST>
+<VAR> ::= [A−Z]
+<VARNUM> ::= number | <VAR>
+<SET> ::= "SET" <VAR> ":=" <POLISH>
+<POLISH> ::= <OP> <POLISH> | <VARNUM> <POLISH> | ";"
+<OP> ::= "+" | "−" | "*" | "/"
+<CMP> ::= ">" | "="
+
+'MOV': move the position of the turtle to a specified postion. 
+
+'COLOR': set the drawing color to red, green or blue specified by the second argument (RED, GREEN, BLUE). 
+
+'HOME': set turtle position to origin and angle to zero
+
+'IF': if the first varnum is greater/equal to the second varnum, following instruction list is conducted
+

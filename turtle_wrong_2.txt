@@ -1,0 +1,7 @@
+{
+   DO A FROM 1 TO 100 {
+      SET C X A 1.5 * ;
+      MAIN C
+      RT 62
+   }
+}

@@ -1,0 +1,11 @@
+{
+   DO A FROM 1 TO 22 {
+      SET C := A 100 * ;
+      MOV C C
+      DO B FROM 1 TO 30 {
+         SET D := B 1.5 * ;
+         FD D
+         RT 62
+      }
+   }
+}

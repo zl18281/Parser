@@ -1,9 +1,0 @@
-{
- DO A FROM 1 TO 20 {
-  SET C := A 10 * ;
-  DO B FROM 1 TO 4 {
-   RT 90
-   FD C
-  }
- }
-}
